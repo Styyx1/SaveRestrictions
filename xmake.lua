@@ -5,7 +5,7 @@ set_xmakever("2.8.2")
 includes("lib/commonlibsse")
 
 -- set project
-set_project("commonlibsse-template")
+set_project("SaveRestrictions")
 set_version("1.0.0")
 set_license("GPL-3.0")
 
@@ -18,19 +18,23 @@ add_rules("mode.debug", "mode.releasedbg")
 add_rules("plugin.vsxmake.autoupdate")
 
 -- set policies
+set_policy("build.optimization.lto", true)
 set_policy("package.requires_lock", true)
 
 -- set configs
 set_config("skyrim_ae", true)
+set_config("commonlib_toml", true)
+
+add_extrafiles("release/**.toml")
 
 -- targets
-target("commonlibsse-template")
+target("SaveRestrictions")
     -- add dependencies to target
     add_deps("commonlibsse")
 
     -- add commonlibsse plugin
     add_rules("commonlibsse.plugin", {
-        name = "commonlibsse-template",
+        name = "SaveRestrictions",
         author = "styyx",
         description = "SKSE64 plugin template using CommonLibSSE"
     })
@@ -39,6 +43,7 @@ target("commonlibsse-template")
     add_files("src/**.cpp")
     add_headerfiles("src/**.h")
     add_includedirs("src")
+    add_includedirs("extern/clib-utils/include", { public = true })
     set_pcxxheader("src/pch.h")
 
 after_build(function(target)
