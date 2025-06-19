@@ -12,6 +12,7 @@ namespace Config {
 	{
 	public:
 		static inline REX::TOML::I32 save_notify_variant{ "Saving.Toggles", "iSaveNotificationVariant", 2};
+		static inline REX::TOML::Bool disable_save_in_combat{ "Saving.Toggles", "bDisableSavesInCombat", true };
 		static inline REX::TOML::Str exit_save_message{ "Saving.Texts", "sTemporarySaveMessageBox", std::string("You can now save for {} seconds") };
 		static inline REX::TOML::F32 temporary_save_time{ "Saving.Settings", "fTemporarySaveEnableTime", 120.0f };
 

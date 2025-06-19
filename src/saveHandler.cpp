@@ -122,10 +122,17 @@ namespace SaveHandler {
 		if (SaveTimer::GetSingleton()->IsRunning()) {
 			return true;
 		}
+		
 
 		auto player = RE::PlayerCharacter::GetSingleton();
 		if (!player)
 			return false;
+
+		if (Config::Settings::GetSingleton()->disable_save_in_combat.GetValue()) {
+			if (player->IsInCombat()) {
+				return false;
+			}			
+		}
 
 		auto playerCell = player->GetParentCell();
 		if (!playerCell) {
