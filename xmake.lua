@@ -36,7 +36,7 @@ target("SaveRestrictions")
     add_rules("commonlibsse.plugin", {
         name = "SaveRestrictions",
         author = "styyx",
-        description = "SKSE64 plugin template using CommonLibSSE"
+        description = "SKSE Plugin to restrict saving"
     })
 
     -- add src files
