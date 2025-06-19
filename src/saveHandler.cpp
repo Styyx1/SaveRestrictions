@@ -61,6 +61,7 @@ namespace SaveHandler {
 		inns = {
 			"LocTypeInn",
 			"LocTypeTemple",
+			"LocTypePlayerHouse",
 		};
 
 		// Towns
