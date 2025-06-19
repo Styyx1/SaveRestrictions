@@ -8,13 +8,12 @@ This is a basic plugin template using CommonLibSSE.
 
 ## Getting Started
 ```bat
-git clone https://github.com/Styyx1/commonlibsse-template --recursive
-cd commonlibsse-template
+git clone https://github.com/Styyx1/SavingRestrictions --recursive
+cd SavingRestrictions
 ```
 
 ### Build
-To build the project you first need to run the ``projectSetup.py`` and enter the data it asks for.   
-Then run the following command:
+To build the project you first need to run the following command:
 ```bat
 xmake build
 ```
@@ -42,6 +41,3 @@ If you want to upgrade the project's dependencies, run the following commands:
 xmake repo --update
 xmake require --upgrade
 ```
-
-## Documentation
-Please refer to the [Wiki](../../wiki/Home) for more advanced topics.
