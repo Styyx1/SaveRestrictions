@@ -194,10 +194,10 @@ namespace SaveHandler {
 		const auto& self = SaveManager::GetSingleton();
 		const auto& saveTimer = SaveTimer::GetSingleton();
 		if (saveTimer->IsRunning() && saveTimer->Elapsed() >= saveTimer->GetExpectedRuntime()) {
-			REX::INFO("resetting timer, expected runtime was: {}, actual runtime is: {}", saveTimer->GetExpectedRuntime(), saveTimer->Elapsed());
+			REX::DEBUG("resetting timer, expected runtime was: {}, actual runtime is: {}", saveTimer->GetExpectedRuntime(), saveTimer->Elapsed());
 			saveTimer->Stop();
 			SaveItems::GetSingleton()->SetIsWorking(false);
-		}
+		}		
 
 		const bool isAllowed = self->GetIsInSaveAllowLoc();
 		REX::DEBUG("isAllowed in main loop is {}", isAllowed ? "true" : "false");
@@ -254,7 +254,7 @@ namespace SaveHandler {
 				}							
 			}
 		}
-		return _Hook2(a_this, a_message);
+		return _Hook1(a_this, a_message);
 	}
 	void SaveItems::ShowSaveNotification(const std::string& message)
 	{

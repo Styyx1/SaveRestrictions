@@ -1,9 +1,8 @@
-# AutoSaveOnQuit Settings
 [Saving.Toggles]
 iSaveNotificationVariant = 1										# Select notification variant for when a temporary save is available. 0 = no message, 1 = Notification Message, 2 = message box. Any other value = no message.
 
 [Saving.Texts]
-sTemporarySaveMessageBox = "You can now save for  {} seconds"		# The {} is needed in there to print the time to the message box. Don't change the text without putting exactly 1 {} in there.
+sTemporarySaveMessageBox = "You can now save for {} seconds"		# The {} is needed in there to print the time to the message box. Don't change the text without putting exactly 1 {} in there.
 
 [Saving.Settings]
-fTemporarySaveEnableTime = 60.0										# Time in seconds a temporary save allow state remains active (by default you can get this by reading a book of the dragonborn
+fTemporarySaveEnableTime = 60.0										# Time in seconds a temporary save allow state remains active (by default you can get this by reading a book of the dragonborn)

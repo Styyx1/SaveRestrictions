@@ -60,7 +60,7 @@ namespace SaveHandler {
 		void SetIsWorking(bool set) { _inProgress = set; };
 
 	private:
-		static inline REL::HookVFT _Hook2{ RE::VTABLE_BookMenu[0], 0x4, ProcessMessage };
+		static inline REL::HookVFT _Hook1{ RE::VTABLE_BookMenu[0], 0x4, ProcessMessage };
 		static inline bool _inProgress{ false };
 		static void ShowSaveNotification(const std::string& message);
 	};
