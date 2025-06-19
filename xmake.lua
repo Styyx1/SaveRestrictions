@@ -43,7 +43,6 @@ target("SaveRestrictions")
     add_files("src/**.cpp")
     add_headerfiles("src/**.h")
     add_includedirs("src")
-    add_includedirs("extern/clib-utils/include", { public = true })
     set_pcxxheader("src/pch.h")
 
 after_build(function(target)
