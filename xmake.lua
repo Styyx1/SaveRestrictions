@@ -3,6 +3,7 @@ set_xmakever("2.8.2")
 
 -- includes
 includes("lib/commonlibsse")
+includes("extern/styyx-utils/xmake.lua")
 
 -- set project
 set_project("SaveRestrictions")
@@ -31,7 +32,7 @@ add_extrafiles("release/**.toml")
 target("SaveRestrictions")
     -- add dependencies to target
     add_deps("commonlibsse")
-
+    add_deps("styyx-util")
     -- add commonlibsse plugin
     add_rules("commonlibsse.plugin", {
         name = "SaveRestrictions",
@@ -54,7 +55,7 @@ after_build(function(target)
                 os.trycp(target:targetfile(), plugins)
                 os.trycp(target:symbolfile(), plugins)
                 -- Copy config files or other extras
-                os.trycp("$(projectdir)/release/**", plugins)
+                os.trycp("$(projectdir)/release/**.toml", plugins)
             end
         end
     end

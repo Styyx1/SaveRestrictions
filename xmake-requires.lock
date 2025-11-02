@@ -9,14 +9,7 @@
                 commit = "30bf09689d5f65e9ea4e3904ceb675f8f04f0789",
                 url = "https://github.com/xmake-io/xmake-repo.git"
             },
-            version = "3.31.1"
-        },
-        ["commonlib-shared 7c29a1e16b4ee5d5ee06f706590b28099b7a5a59#949801d1"] = {
-            repo = {
-                commit = "47eca6ffcb79208b9f757df369b2ddad322aac16",
-                url = "https://github.com/libxse/libxse-xrepo"
-            },
-            version = "7c29a1e16b4ee5d5ee06f706590b28099b7a5a59"
+            version = "3.31.6-msvc6"
         },
         ["spdlog#9c36f0a9"] = {
             repo = {
@@ -30,7 +23,7 @@
             repo = {
                 branch = "master",
                 commit = "d557ccb28de6284dff4e7a174e1681f5b386c2d5",
-                url = "https://gitlab.com/tboox/xmake-repo.git"
+                url = "https://github.com/xmake-io/xmake-repo.git"
             },
             version = "v4.4.0"
         }

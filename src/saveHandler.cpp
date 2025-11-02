@@ -272,7 +272,7 @@ namespace SaveHandler {
 			RE::DebugMessageBox(message.c_str());
 			break;
 		case Config::NotificationVariant::kNotification:
-			RE::DebugNotification(message.c_str(), nullptr, true);
+			RE::DebugNotification(message.c_str(), nullptr, false);
 			break;
 		case Config::NotificationVariant::kNone:
 		default:

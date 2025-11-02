@@ -1,5 +1,6 @@
 #include "menu-event.h"
 #include "saveHandler.h"
+#include "ui.h"
 
 namespace MenuEventHandler{
 	void OpenCloseManager::Register()
@@ -7,6 +8,7 @@ namespace MenuEventHandler{
 		RE::UI::GetSingleton()->AddEventSink(GetSingleton());
 		REX::INFO("Registered for {}", typeid(OpenCloseManager).name());
 	}
+
 	void OpenCloseManager::SetDifficultyForSaving()
 	{
 		const auto& saveHandler = SaveHandler::SaveLocations::GetSingleton();

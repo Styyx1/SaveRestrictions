@@ -1,5 +1,6 @@
 #include "saveHandler.h"
 #include "menu-event.h"
+#include "ui.h"
 
 void InitListener(SKSE::MessagingInterface::Message* a_msg) {
 
@@ -10,6 +11,7 @@ void InitListener(SKSE::MessagingInterface::Message* a_msg) {
 		if (saveLocs)
 			saveLocs->PopulateKeywordSets();
 		MenuEventHandler::OpenCloseManager::Register();
+		UI::Register();
 		break;
 
 	case SKSE::MessagingInterface::kPostLoadGame:		
@@ -26,7 +28,7 @@ SKSE_PLUGIN_LOAD(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SKSE::GetMessagingInterface()->RegisterListener(InitListener);
-	Config::Settings::GetSingleton()->LoadSettings();
+	Config::Settings::GetSingleton()->UpdateSettings();
 	SaveHandler::SaveManager::GetSingleton();
 	return true;
 }
